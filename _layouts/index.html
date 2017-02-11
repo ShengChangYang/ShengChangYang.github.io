@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		{% include html_head.html %}
-		{% include favicon_setup.html %}
-	</head>
+    <head>
+        {% include html_head.html %}
+        {% include favicon_setup.html %}
+    </head>
 
-	<body>
-		<div style="width: 1024px; margin: 28px auto 0 auto; height: 140px; display: block">
-			<img src="images/home/logo.png" style="height: 60px; float: left; margin-left:8px;"/>
-			{% include drop_down_menu.html %}
-		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src="{{ site.drop_down_menu }}/js/cbpHorizontalMenu.min.js"></script>
-		<script>
-			$(function() {
-				cbpHorizontalMenu.init();
-			});
-		</script>
-	</body>
+    <body>
+        <div style="width: 1024px; margin: 28px auto 0 auto; height: 140px; display: block">
+            <img src="images/home/logo.png" style="height: 60px; float: left; margin-left:8px;"/>
+            {% include drop_down_menu.html %}
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="{{ site.drop_down_menu }}/js/cbpHorizontalMenu.min.js"></script>
+        <script>
+            $(function() {
+                cbpHorizontalMenu.init();
+            });
+        </script>
+    </body>
 </html>
