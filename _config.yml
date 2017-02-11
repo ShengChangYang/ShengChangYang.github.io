@@ -27,3 +27,6 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+
+# HorizontalDropDownMenu
+drop_down_menu: HorizontalDropDownMenu
