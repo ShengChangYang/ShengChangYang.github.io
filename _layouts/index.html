@@ -6,9 +6,14 @@
     </head>
 
     <body>
-        <div style="width: 1024px; margin: 28px auto 0 auto; height: 140px; display: block">
-            <img src="images/home/logo.png" style="height: 60px; float: left; margin-left:8px;"/>
+        <div style="width: 1024px; margin: 28px auto 0 auto; height: calc(60px + 1em + 38px + 4px)">
+            <a href="{{ site.url }}">
+                <img src="images/home/logo.png" style="height: 60px; float: left; margin-left:8px;"/>
+            </a>
             {% include drop_down_menu.html %}
+        </div>
+        <div style="background-color: #f9f9f9; height: 1000px; width: 1024px; margin: 0 auto;">
+
         </div>
         {% include html_body_end.html %}
     </body>
