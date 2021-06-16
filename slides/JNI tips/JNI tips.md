@@ -617,7 +617,7 @@ There are a few ways to work around this:
 
 ---
 
-# FAQ: How do I share raw data with native code?
+# FAQ: How do I share raw data with native code? (1/3)
 You may need to access a large buffer of raw data from both managed and native code. Common examples include manipulation of bitmaps or sound samples. There are two basic approaches.
 
 You can store the data in a `byte[]`.
@@ -625,13 +625,13 @@ You can store the data in a `byte[]`.
 
 ---
 
-# FAQ: How do I share raw data with native code?
+# FAQ: How do I share raw data with native code? (2/3)
 The alternative is to store the data in a direct byte buffer. These can be created with `java.nio.ByteBuffer.allocateDirect`, or the JNI `NewDirectByteBuffer` function.
 > Unlike regular byte buffers, the storage is not allocated on the managed heap, and can always be accessed directly from native code (get the address with `GetDirectBufferAddress`). Depending on how direct byte buffer access is implemented, accessing the data from managed code can be very slow.
 
 ---
 
-# FAQ: How do I share raw data with native code?
+# FAQ: How do I share raw data with native code? (3/3)
 The choice of which to use depends on two factors:
  1. Will most of the data accesses happen from code written in Java or in C/C++?
  1. If the data is eventually being passed to a system API, what form must it be in? (For example, if the data is eventually passed to a function that takes a `byte[]`, doing processing in a direct `ByteBuffer` might be unwise.)
