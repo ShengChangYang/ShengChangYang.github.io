@@ -172,11 +172,11 @@ Calling `PublishProcessor.offer()`, `BehaviorProcessor.offer()` or `MulticastPro
 
 # MulticastProcessor.offer fusion-check
 
-`MulticastProcessor` was designed to be processor that coordinates backpressure like the Flowable.publish operators do. It includes internal optimizations such as operator-fusion when subscribing it to the right kind of source.
+`MulticastProcessor` was designed to be processor that coordinates backpressure like the `Flowable.publish` operators do. It includes internal optimizations such as operator-fusion when subscribing it to the right kind of source.
 
-Since users can retain the reference to the processor itself, they could, in concept, call the onXXX methods and possibly cause trouble. The same is true for the offer method which, when called while the aforementioned fusion is taking place, leads to undefined behavior in 2.x.
+Since users can retain the reference to the processor itself, they could, in concept, call the `onXXX` methods and possibly cause trouble. The same is true for the `offer` method which, when called while the aforementioned fusion is taking place, leads to undefined behavior in 2.x.
 
-With 3.x, the offer method will throw an IllegalStateException and not disturb the internal state of the processor.
+With 3.x, the `offer` method will throw an `IllegalStateException` and not disturb the internal state of the processor.
 
 ---
 
@@ -226,7 +226,7 @@ With 3.x, the behavior of all `window` operators has been changed so that when i
 
 In 1.x and 2.x, calling the `CompositeException.getCause()` method resulted in a generation of a chain of exceptions from the internal list of aggregated exceptions. This was mainly done because Java 6 lacks the suppressed exception feature of Java 7+ exceptions. However, the implementation was possibly mutating exceptions or, sometimes, unable to establish a chain at all. Given the source of the original contribution of the method, it was risky to fix the issues with it in 2.x.
 
-With 3.x, the method constructs a cause exception that when asked for a stacktrace, generates an output without touching the aggregated exceptions (which is IDE friendly and should be navigable):
+With 3.x, the method constructs a cause exception that when asked for a stacktrace, generates an output without touching the aggregated exceptions (which is IDE friendly and should be navigable).
 
 ---
 
@@ -272,7 +272,7 @@ h1 {
 
 ---
 
-# Functional interfaces (1/1)
+# Functional interfaces (1/2)
 
 RxJava 2.x introduced a custom set of functional interfaces in `io.reactivex.functions` so that the use of the library is possible with the same types on Java 6 and Java 8. A secondary reason for such custom types is that the standard Java 8 function types do not support throwing any checked exceptions, which in itself can result in some inconvenience when using RxJava operators.
 
