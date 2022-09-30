@@ -27,6 +27,9 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - slides
+keep_files:
+  - slides
 
 # HorizontalDropDownMenu
 drop_down_menu: HorizontalDropDownMenu
