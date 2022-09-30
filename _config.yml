@@ -22,14 +22,12 @@ github_username:  ShengChangYang
 # Build settings
 markdown: kramdown
 theme: jekyll-theme-cayman
-gems:
+plugins:
   - jekyll-feed
 exclude:
   - Gemfile
   - Gemfile.lock
-  - _slides
-keep_files:
-  - _slides
+  - slides/*/*.md
 
 # HorizontalDropDownMenu
 drop_down_menu: HorizontalDropDownMenu
