@@ -277,36 +277,31 @@ Similarly, you can use the `Set<Type>ArrayRegion` call to copy data into an arra
 ---
 
 <style scoped>
-section.split {
-    overflow: visible;
+section {
     display: grid;
     grid-template-columns: 45% 55%;
-    grid-template-rows: fit-content(10%) fit-content(10%) auto;
     grid-template-areas:
         "slidetitle slidetitle"
         "slidecontent slidecontent"
         "leftpanel rightpanel";
 }
-section.split h1 {
+section h1 {
     grid-area: slidetitle;
 }
-section.split p {
+section p {
     grid-area: slidecontent;
 }
-section.split .ldiv {
+section :nth-child(3) {
     grid-area: leftpanel;
 }
-section.split .rdiv {
+section :nth-child(5) {
     grid-area: rightpanel;
 }
 </style>
 
-<!-- _class: split -->
-
 # Exceptions (2/4)
-The only JNI functions that you are allowed to call while an exception is pending are:
 
-<div class=ldiv>
+The only JNI functions that you are allowed to call while an exception is pending are:
 
  - `DeleteGlobalRef`
  - `DeleteLocalRef`
@@ -317,9 +312,7 @@ The only JNI functions that you are allowed to call while an exception is pendin
  - `ExceptionOccurred`
  - `MonitorExit`
 
-</div>
-
-<div class=rdiv>
+<br/>
 
  - `PopLocalFrame`
  - `PushLocalFrame`
@@ -328,8 +321,6 @@ The only JNI functions that you are allowed to call while an exception is pendin
  - `ReleaseStringChars`
  - `ReleaseStringCritical`
  - `ReleaseStringUTFChars`
-
-</div>
 
 ---
 

@@ -1,4 +1,4 @@
 Build command:
 ```shell
-marp --html What\'s\ different\ in\ 3.0\ RxJava.md
+marp --html --bespoke.osc=false --bespoke.progress What\'s\ different\ in\ 3.0\ RxJava.md
 ```

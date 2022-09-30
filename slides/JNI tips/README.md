@@ -1,4 +1,4 @@
 Build command:
 ```shell
-marp --html JNI\ tips.md
+marp --html --bespoke.osc=false --bespoke.progress JNI\ tips.md
 ```
